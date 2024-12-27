@@ -52,7 +52,7 @@ BITMAPINFOHEADER	bitmapInfoHeader;	// nagłówek obrazu
 unsigned char*		bitmapData;			// dane tekstury
 unsigned int		texture[2];			// obiekt tekstury
 
-double rot1, rot2, rot3, rot4;
+double rot1, rot2, rot3, rot4, rot5;
 int licznik;
 
 
@@ -289,6 +289,7 @@ void kula(void)
 
 
 
+
 // LoadBitmapFile
 // opis: ładuje mapę bitową z pliku i zwraca jej adres.
 //       Wypełnia strukturę nagłówka.
@@ -441,9 +442,9 @@ void ramie(double r1, double r2, double h, double d)
 
 
 
-	glEnable(GL_TEXTURE_2D); // Włącz teksturowanie
+	//glEnable(GL_TEXTURE_2D); // Włącz teksturowanie
 
-	glBindTexture(GL_TEXTURE_2D, texture[2]);
+	//glBindTexture(GL_TEXTURE_2D, texture[2]);
 	glBegin(GL_QUADS);
 	glNormal3d(0, 0, 1);
 	glTexCoord2d(1.0, 1.0); glVertex3d(d, -r2, h);
@@ -451,8 +452,10 @@ void ramie(double r1, double r2, double h, double d)
 	glTexCoord2d(0.0, 0.0); glVertex3d(0, r1, h);
 	glTexCoord2d(1.0, 0.0); glVertex3d(0, -r1, h);
 	glEnd();
-	glDisable(GL_TEXTURE_2D); // Wyłącz teksturowanie
+	//glDisable(GL_TEXTURE_2D); // Wyłącz teksturowanie
+	
 
+	//Przednia ściana
 	glBegin(GL_QUADS);
 	glNormal3d(0, 0, -1);
 	glVertex3d(0, r1, 0);
@@ -801,6 +804,8 @@ void tasma(void) {
 void robot_projekt(double d1, double d2, double d3, double d4) {
 	glPushMatrix();
 
+	glTranslated(200, 0, 0);
+
 	glRotated(-90, 1, 0, 0);
 	glRotated(d1, 0, 0, 1);  // Używamy rot4 dla odpowiedniej rotacji
 	glTranslated(0, 0, -50);
@@ -837,9 +842,61 @@ void robot_projekt(double d1, double d2, double d3, double d4) {
 	glRotated(90, 0, 1, 0);
 	walec_light(10, 50); // stojak3
 
+	glTranslated(0, 0, 50);
+	kula_robot(25); //głowa
+
+
 	glPopMatrix();
 }
 
+void robot_projekt2(double d1, double d2, double d3, double d4, double d5) {
+	glPushMatrix();
+
+	glRotated(-90, 1, 0, 0);
+	glRotated(d1, 0, 0, 1); 
+	glTranslated(0, 0, -50);
+	walec_light(25, 20); // podstawa
+
+	glTranslated(0, 0, 20);
+	kula_robot(15); 
+
+	
+	glRotated(d2, 0, 1, 0);
+	glRotated(-35, 0, 1, 0);
+	walec_light(10, 75); 
+
+	
+	
+	glTranslated(0, 0, 75);
+	kula_robot(12);
+
+	glRotated(d3, 0, 1, 0);
+	glRotated(90, 0, 1, 0);
+	walec_light(10, 60);
+
+	
+	glTranslated(0, 0, 60);
+	glRotated(60+d4, 0, 1, 0);
+	kula_robot(12); 
+	
+	walec_light(10, 45);
+	glTranslated(0,0,45);
+	kula_robot(12);
+
+	glRotated(d5 + 90, 1, 0, 0);
+	glTranslated(0, 0, 12);
+	ramie(7, 7, 10, 20);
+
+
+
+
+
+
+
+
+
+	glPopMatrix();
+}
 
 void dwa_roboty() {
 	
@@ -900,7 +957,7 @@ void RenderScene(void)
 	//walec_light(30, 50);
 	
 	//Wyrysowanie ramienia
-	//ramie(10, 30, 20, 60);
+	//yramie(10, 30, 20, 60);
 
 	//kula();
 
@@ -915,6 +972,7 @@ void RenderScene(void)
 	
 
 	robot_projekt(rot1, rot2, rot3, rot4);
+	robot_projekt2(rot1, rot2, rot3, rot4,rot5);
 	tasma();
 	/////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////
@@ -1296,10 +1354,10 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 
 
 
-		if (wParam == VK_UP)
+		if (wParam == VK_DOWN)
 			xRot -= 5.0f;
 
-		if (wParam == VK_DOWN)
+		if (wParam == VK_UP)
 			xRot += 5.0f;
 
 		if (wParam == VK_LEFT)
@@ -1327,6 +1385,10 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 			rot4 -= 5.0f;
 		if (wParam == '8')
 			rot4 += 5.0f;
+		if (wParam == '9')
+			rot5 -= 5.0f;
+		if (wParam == '0')
+			rot5 += 5.0f;
 
 		InvalidateRect(hWnd, NULL, FALSE);
 	}
