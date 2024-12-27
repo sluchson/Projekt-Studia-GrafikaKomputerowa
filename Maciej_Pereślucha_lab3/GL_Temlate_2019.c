@@ -50,7 +50,7 @@ static GLsizei lastWidth;
 // Opis tekstury
 BITMAPINFOHEADER	bitmapInfoHeader;	// nagłówek obrazu
 unsigned char*		bitmapData;			// dane tekstury
-unsigned int		texture[2];			// obiekt tekstury
+unsigned int		texture[1];			// obiekt tekstury
 
 double rot1, rot2, rot3, rot4, rot5;
 int licznik;
@@ -205,12 +205,14 @@ void SetupRC()
 
 void skrzynka(void)
 {
+
+	
 	glColor3d(0.8, 0.7, 0.3);
 
+	
+	glEnable(GL_TEXTURE_2D); 
 
-	glEnable(GL_TEXTURE_2D); // Włącz teksturowanie
-
-	glBindTexture(GL_TEXTURE_2D, texture[0]);
+	glBindTexture(GL_TEXTURE_2D, texture[1]);
 	glBegin(GL_QUADS);
 	glNormal3d(0, 0, 1);
 	glTexCoord2d(1.0, 1.0); glVertex3d(25, 25, 25);
@@ -218,7 +220,8 @@ void skrzynka(void)
 	glTexCoord2d(0.0, 0.0); glVertex3d(-25, -25, 25);
 	glTexCoord2d(1.0, 0.0); glVertex3d(25, -25, 25);
 	glEnd();
-	glBindTexture(GL_TEXTURE_2D, texture[1]);
+
+
 	glBegin(GL_QUADS);
 	glNormal3d(1, 0, 0);
 	glTexCoord2d(1.0, 1.0); glVertex3d(25, 25, 25);
@@ -227,35 +230,77 @@ void skrzynka(void)
 	glTexCoord2d(1.0, 0.0); glVertex3d(25, 25, -25);
 	glEnd();
 
-	glDisable(GL_TEXTURE_2D); // Wyłącz teksturowanie
 
+
+	glBindTexture(GL_TEXTURE_2D, texture[1]);
+	glBegin(GL_QUADS);
+	glNormal3d(0, 0, -1);
+	glTexCoord2d(1.0, 1.0); glVertex3d(25, 25, -25);
+	glTexCoord2d(0.0, 1.0); glVertex3d(25, -25, -25);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-25, -25, -25);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-25, 25, -25);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glNormal3d(0, 0, 1);
+	glTexCoord2d(1.0, 1.0); glVertex3d(25, -25, -25);
+	glTexCoord2d(0.0, 1.0); glVertex3d(25, 25, -25);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-25, 25, -25);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-25, -25, -25);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glNormal3d(-1, 0, 0);
+	glTexCoord2d(1.0, 1.0); glVertex3d(-25, 25, -25);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-25, -25, -25);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-25, -25, 25);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-25, 25, 25);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glNormal3d(1, 0, 0);
+	glTexCoord2d(1.0, 1.0); glVertex3d(-25, -25, -25);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-25, 25, -25);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-25, 25, 25);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-25, -25, 25);
+	glEnd();
 
 
 	glBegin(GL_QUADS);
-	glNormal3d(0, 0, -1);
-	glVertex3d(25, 25, -25);
-	glVertex3d(25, -25, -25);
-	glVertex3d(-25, -25, -25);
-	glVertex3d(-25, 25, -25);
-
-	glNormal3d(-1, 0, 0);
-	glVertex3d(-25, 25, -25);
-	glVertex3d(-25, -25, -25);
-	glVertex3d(-25, -25, 25);
-	glVertex3d(-25, 25, 25);
-
-	glNormal3d(0, 1, 0);
-	glVertex3d(25, 25, 25);
-	glVertex3d(25, 25, -25);
-	glVertex3d(-25, 25, -25);
-	glVertex3d(-25, 25, 25);
-
 	glNormal3d(0, -1, 0);
-	glVertex3d(25, -25, 25);
-	glVertex3d(-25, -25, 25);
-	glVertex3d(-25, -25, -25);
-	glVertex3d(25, -25, -25);
+	glTexCoord2d(1.0, 1.0); glVertex3d(25, -25, 25);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-25, -25, 25);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-25, -25, -25);
+	glTexCoord2d(1.0, 0.0); glVertex3d(25, -25, -25);
 	glEnd();
+
+	glBegin(GL_QUADS);
+	glNormal3d(0, 1, 0);
+	glTexCoord2d(1.0, 1.0); glVertex3d(-25, -25, 25);
+	glTexCoord2d(0.0, 1.0); glVertex3d(25, -25, 25);
+	glTexCoord2d(0.0, 0.0); glVertex3d(25, -25, -25);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-25, -25, -25);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glNormal3d(-1, 0, 0);
+	glTexCoord2d(1.0, 1.0); glVertex3d(25, -25, 25);
+	glTexCoord2d(0.0, 1.0); glVertex3d(25, 25, 25);
+	glTexCoord2d(0.0, 0.0); glVertex3d(25, 25, -25);
+	glTexCoord2d(1.0, 0.0); glVertex3d(25, -25, -25);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glNormal3d(0, 0, -1);
+	glTexCoord2d(1.0, 1.0); glVertex3d(-25, 25, 25);
+	glTexCoord2d(0.0, 1.0); glVertex3d(25, 25, 25);
+	glTexCoord2d(0.0, 0.0); glVertex3d(25, -25, 25);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-25, -25, 25);
+	glEnd();
+
+	glDisable(GL_TEXTURE_2D); 
+
+
 }
 
 void walec01(void)
@@ -796,10 +841,68 @@ void tasma(void) {
 	glTranslated(100, 0, 0);
 	graniastoslup(15, 25, 500);
 
-	glColor3d(0,0,0);
-	glTranslated(-90, 10, 0);
-	graniastoslup(100, 10, 499);
+	// Nakładanie tekstury
+	glEnable(GL_TEXTURE_2D);
+	glBindTexture(GL_TEXTURE_2D, texture[3]); // Ustawienie tekstury
+
+	glColor3d(1, 1, 1); // Ustawienie koloru na biały dla poprawnego wyświetlenia tekstury
+	glTranslated(-45, 18, 249);
+
+	// Rozrysowanie ścian graniastosłupa z teksturą
+	glBegin(GL_QUADS);
+
+	// Przednia ściana
+	glNormal3d(0, 0, 1);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-50, -5, 250);
+	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, 250);
+	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, 250);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, 250);
+
+	// Tylna ściana
+	glNormal3d(0, 0, -1);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-50, -5, -249);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, -249);
+	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, -249);
+	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, -249);
+	
+	
+
+	// Prawa ściana
+	glNormal3d(1, 0, 0);
+	glTexCoord2d(0.0, 1.0); glVertex3d(50, -5, 250);
+	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, -249);
+	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, -249);
+	glTexCoord2d(0.0, 0.0); glVertex3d(50, 5, 250);
+
+	// Lewa ściana
+	glNormal3d(-1, 0, 0);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-50, -5, 250);
+	glTexCoord2d(1.0, 1.0); glVertex3d(-50, -5, -249);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-50, 5, -249);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, 250);
+
+	// Dolna ściana
+	glNormal3d(0, -1, 0);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-50, -5, 250);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-50, -5, -249);
+	glTexCoord2d(1.0, 0.0); glVertex3d(50, -5, -249);
+	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, 250);
+
+	
+	
+
+	// Górna ściana
+	glNormal3d(0, 1, 0);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-50, 5, 250);
+	glTexCoord2d(1.0, 1.0); glVertex3d(50, 5, 250);
+	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, -249);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, -249);
+
+	glEnd();
+
+	glDisable(GL_TEXTURE_2D); // Wyłączenie tekstur
 }
+
 
 void robot_projekt(double d1, double d2, double d3, double d4) {
 	glPushMatrix();
@@ -881,22 +984,104 @@ void robot_projekt2(double d1, double d2, double d3, double d4, double d5) {
 	
 	walec_light(10, 45);
 	glTranslated(0,0,45);
-	kula_robot(12);
+	kula_robot(11);
 
-	glRotated(d5 + 90, 1, 0, 0);
-	glTranslated(0, 0, 12);
-	ramie(7, 7, 10, 20);
+	
+	glRotated(90, 1, 0, 0);
+	glRotated(-90, 0, 0, 1);
+	glTranslated(0,0,-3);
 
+	
+	glPushMatrix();
+	glTranslated(0, 0, 6);          
+	glRotated(180, 0, 1, 0);        
+	glRotated(60, 0, 0, 1);        
+	glRotated(0.25 * d5, 0, 0, 1); 
+	ramie(7, 4, 5, 25); 
+	glPopMatrix();
 
-
-
-
-
-
-
+	
+	glPushMatrix();
+	glTranslated(0, 0, 6);          
+	glRotated(180, 0, 1, 0);        
+	glRotated(-60, 0, 0, 1);        
+	glRotated(-0.25 * d5, 0, 0, 1); 
+	ramie(7, 4, 5, 25);             
+	glPopMatrix();
 
 	glPopMatrix();
 }
+
+
+void podstawa() {
+
+	
+	// Nakładanie tekstury
+	glEnable(GL_TEXTURE_2D);
+	glBindTexture(GL_TEXTURE_2D, texture[2]); // Ustawienie tekstury
+
+	glColor3d(1, 1, 1); // Ustawienie koloru na biały dla poprawnego wyświetlenia tekstury
+	glTranslated(-45, 18, 249);
+
+	// Rozrysowanie ścian graniastosłupa z teksturą
+	glBegin(GL_QUADS);
+
+	// Przednia ściana
+	glNormal3d(0, 0, 1);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-50, -5, 250);
+	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, 250);
+	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, 250);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, 250);
+
+	// Tylna ściana
+	glNormal3d(0, 0, -1);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-50, -5, -249);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, -249);
+	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, -249);
+	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, -249);
+
+
+
+	// Prawa ściana
+	glNormal3d(1, 0, 0);
+	glTexCoord2d(0.0, 1.0); glVertex3d(50, -5, 250);
+	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, -249);
+	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, -249);
+	glTexCoord2d(0.0, 0.0); glVertex3d(50, 5, 250);
+
+	// Lewa ściana
+	glNormal3d(-1, 0, 0);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-50, -5, 250);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, 250);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-50, 5, -249);
+	glTexCoord2d(1.0, 1.0); glVertex3d(-50, -5, -249);
+	
+	
+
+	// Dolna ściana
+	glNormal3d(0, -1, 0);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-50, -5, 250);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-50, -5, -249);
+	glTexCoord2d(1.0, 0.0); glVertex3d(50, -5, -249);
+	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, 250);
+
+
+
+
+	// Górna ściana
+	glNormal3d(0, 1, 0);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-50, 5, 250);
+	glTexCoord2d(1.0, 1.0); glVertex3d(50, 5, 250);
+	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, -249);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, -249);
+
+	glEnd();
+
+	glDisable(GL_TEXTURE_2D); // Wyłączenie tekstur
+}
+
+	
+
 
 void dwa_roboty() {
 	
@@ -943,7 +1128,7 @@ void RenderScene(void)
 
 	//dwa_roboty();
 	//walec01();
-	//skrzynka();
+	skrzynka();
 
 	//Wyrysowanie szescianu
 	//szescian();
@@ -969,9 +1154,10 @@ void RenderScene(void)
 	///graniastoslup(10,10,10);
 
 	//stozek(20, 40, 40);
-	
-
-	robot_projekt(rot1, rot2, rot3, rot4);
+	glTranslated(0, -50, 0);
+	podstawa();
+	glTranslated(0, 50, 0);
+	//robot_projekt(rot1, rot2, rot3, rot4);
 	robot_projekt2(rot1, rot2, rot3, rot4,rot5);
 	tasma();
 	/////////////////////////////////////////////////////////////////
@@ -1241,9 +1427,13 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+		// tworzy obraz tekstury
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, bitmapInfoHeader.biWidth,
+			bitmapInfoHeader.biHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, bitmapData);
+
 
 		// ładuje trzeci obraz tekstury:
-		bitmapData = LoadBitmapFile("Bitmapy\\NAPIS.bmp", &bitmapInfoHeader);
+		bitmapData = LoadBitmapFile("Bitmapy\\ROCK.bmp", &bitmapInfoHeader);
 		glBindTexture(GL_TEXTURE_2D, texture[2]);       // aktywuje obiekt tekstury
 
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
@@ -1255,6 +1445,29 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		// tworzy obraz tekstury
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, bitmapInfoHeader.biWidth,
 			bitmapInfoHeader.biHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, bitmapData);
+
+
+
+
+
+
+		// ładuje czwarty obraz tekstury:
+		bitmapData = LoadBitmapFile("Bitmapy\\WATER.bmp", &bitmapInfoHeader);
+		glBindTexture(GL_TEXTURE_2D, texture[3]);       // aktywuje obiekt tekstury
+
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+
+		// tworzy obraz tekstury
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, bitmapInfoHeader.biWidth,
+			bitmapInfoHeader.biHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, bitmapData);
+
+
+
+
 
 		if (bitmapData)
 			free(bitmapData);
