@@ -1,19 +1,19 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Katalog pośredni (x64\Debug\) zawiera pliki udostępnione z innego projektu (Maciej_Pereślucha_lab3.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
   GL_Temlate_2019.c
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(393,30): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(518,5): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(518,8): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(518,12): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(519,5): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(519,8): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(520,8): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(537,5): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(537,8): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(537,13): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(538,8): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(538,13): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(539,8): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(1345,12): warning C4244: "return": konwersja z "WPARAM" do "int", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(1582,26): warning C4244: "=": konwersja z "int" do "GLfloat", możliwa utrata danych
-D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(1583,26): warning C4244: "=": konwersja z "int" do "GLfloat", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(388,30): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(513,5): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(513,8): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(513,12): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(514,5): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(514,8): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(515,8): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(532,5): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(532,8): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(532,13): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(533,8): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(533,13): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(534,8): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(1359,12): warning C4244: "return": konwersja z "WPARAM" do "int", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(1629,26): warning C4244: "=": konwersja z "int" do "GLfloat", możliwa utrata danych
+D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\GL_Temlate_2019.c(1630,26): warning C4244: "=": konwersja z "int" do "GLfloat", możliwa utrata danych
   Maciej_Pereślucha_lab3.vcxproj -> D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\x64\Debug\Maciej_Pereślucha_Projekt.exe

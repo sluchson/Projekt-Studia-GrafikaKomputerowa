@@ -50,10 +50,11 @@ static GLsizei lastWidth;
 // Opis tekstury
 BITMAPINFOHEADER	bitmapInfoHeader;	// nagłówek obrazu
 unsigned char*		bitmapData;			// dane tekstury
-unsigned int		texture[1];			// obiekt tekstury
+unsigned int		texture[4];			// obiekt tekstury
 
-double rot1, rot2, rot3, rot4, rot5;
-int licznik;
+double rot1, rot2, rot3, rot4, rot5, rot6, rot7, rot8, rot9, rot10, rot11, rot12, rot13, rot14, mkulaX ,mkulaY, mkulaZ;
+int licznik = 0;
+
 
 
 
@@ -124,7 +125,7 @@ void calcNormal(float v[3][3], float out[3])
 // Change viewing volume and viewport.  Called when window is resized
 void ChangeSize(GLsizei w, GLsizei h)
 {
-	GLfloat nRange = 300.0f;
+	GLfloat nRange = 500.0f;
 	GLfloat fAspect;
 	// Prevent a divide by zero
 	if (h == 0)
@@ -205,103 +206,95 @@ void SetupRC()
 
 void skrzynka(void)
 {
-
-	
 	glColor3d(0.8, 0.7, 0.3);
 
-	
-	glEnable(GL_TEXTURE_2D); 
+	glEnable(GL_TEXTURE_2D);
 
 	glBindTexture(GL_TEXTURE_2D, texture[1]);
 	glBegin(GL_QUADS);
 	glNormal3d(0, 0, 1);
-	glTexCoord2d(1.0, 1.0); glVertex3d(25, 25, 25);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-25, 25, 25);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-25, -25, 25);
-	glTexCoord2d(1.0, 0.0); glVertex3d(25, -25, 25);
+	glTexCoord2d(1.0, 1.0); glVertex3d(30, 30, 30);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-30, 30, 30);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-30, -30, 30);
+	glTexCoord2d(1.0, 0.0); glVertex3d(30, -30, 30);
 	glEnd();
-
 
 	glBegin(GL_QUADS);
 	glNormal3d(1, 0, 0);
-	glTexCoord2d(1.0, 1.0); glVertex3d(25, 25, 25);
-	glTexCoord2d(0.0, 1.0); glVertex3d(25, -25, 25);
-	glTexCoord2d(0.0, 0.0); glVertex3d(25, -25, -25);
-	glTexCoord2d(1.0, 0.0); glVertex3d(25, 25, -25);
+	glTexCoord2d(1.0, 1.0); glVertex3d(30, 30, 30);
+	glTexCoord2d(0.0, 1.0); glVertex3d(30, -30, 30);
+	glTexCoord2d(0.0, 0.0); glVertex3d(30, -30, -30);
+	glTexCoord2d(1.0, 0.0); glVertex3d(30, 30, -30);
 	glEnd();
-
-
 
 	glBindTexture(GL_TEXTURE_2D, texture[1]);
 	glBegin(GL_QUADS);
 	glNormal3d(0, 0, -1);
-	glTexCoord2d(1.0, 1.0); glVertex3d(25, 25, -25);
-	glTexCoord2d(0.0, 1.0); glVertex3d(25, -25, -25);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-25, -25, -25);
-	glTexCoord2d(1.0, 0.0); glVertex3d(-25, 25, -25);
+	glTexCoord2d(1.0, 1.0); glVertex3d(30, 30, -30);
+	glTexCoord2d(0.0, 1.0); glVertex3d(30, -30, -30);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-30, -30, -30);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-30, 30, -30);
 	glEnd();
 
 	glBegin(GL_QUADS);
 	glNormal3d(0, 0, 1);
-	glTexCoord2d(1.0, 1.0); glVertex3d(25, -25, -25);
-	glTexCoord2d(0.0, 1.0); glVertex3d(25, 25, -25);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-25, 25, -25);
-	glTexCoord2d(1.0, 0.0); glVertex3d(-25, -25, -25);
+	glTexCoord2d(1.0, 1.0); glVertex3d(30, -30, -30);
+	glTexCoord2d(0.0, 1.0); glVertex3d(30, 30, -30);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-30, 30, -30);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-30, -30, -30);
 	glEnd();
 
 	glBegin(GL_QUADS);
 	glNormal3d(-1, 0, 0);
-	glTexCoord2d(1.0, 1.0); glVertex3d(-25, 25, -25);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-25, -25, -25);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-25, -25, 25);
-	glTexCoord2d(1.0, 0.0); glVertex3d(-25, 25, 25);
+	glTexCoord2d(1.0, 1.0); glVertex3d(-30, 30, -30);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-30, -30, -30);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-30, -30, 30);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-30, 30, 30);
 	glEnd();
 
 	glBegin(GL_QUADS);
 	glNormal3d(1, 0, 0);
-	glTexCoord2d(1.0, 1.0); glVertex3d(-25, -25, -25);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-25, 25, -25);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-25, 25, 25);
-	glTexCoord2d(1.0, 0.0); glVertex3d(-25, -25, 25);
+	glTexCoord2d(1.0, 1.0); glVertex3d(-30, -30, -30);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-30, 30, -30);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-30, 30, 30);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-30, -30, 30);
 	glEnd();
-
 
 	glBegin(GL_QUADS);
 	glNormal3d(0, -1, 0);
-	glTexCoord2d(1.0, 1.0); glVertex3d(25, -25, 25);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-25, -25, 25);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-25, -25, -25);
-	glTexCoord2d(1.0, 0.0); glVertex3d(25, -25, -25);
+	glTexCoord2d(1.0, 1.0); glVertex3d(30, -30, 30);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-30, -30, 30);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-30, -30, -30);
+	glTexCoord2d(1.0, 0.0); glVertex3d(30, -30, -30);
 	glEnd();
 
 	glBegin(GL_QUADS);
 	glNormal3d(0, 1, 0);
-	glTexCoord2d(1.0, 1.0); glVertex3d(-25, -25, 25);
-	glTexCoord2d(0.0, 1.0); glVertex3d(25, -25, 25);
-	glTexCoord2d(0.0, 0.0); glVertex3d(25, -25, -25);
-	glTexCoord2d(1.0, 0.0); glVertex3d(-25, -25, -25);
+	glTexCoord2d(1.0, 1.0); glVertex3d(-30, -30, 30);
+	glTexCoord2d(0.0, 1.0); glVertex3d(30, -30, 30);
+	glTexCoord2d(0.0, 0.0); glVertex3d(30, -30, -30);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-30, -30, -30);
 	glEnd();
 
 	glBegin(GL_QUADS);
 	glNormal3d(-1, 0, 0);
-	glTexCoord2d(1.0, 1.0); glVertex3d(25, -25, 25);
-	glTexCoord2d(0.0, 1.0); glVertex3d(25, 25, 25);
-	glTexCoord2d(0.0, 0.0); glVertex3d(25, 25, -25);
-	glTexCoord2d(1.0, 0.0); glVertex3d(25, -25, -25);
+	glTexCoord2d(1.0, 1.0); glVertex3d(30, -30, 30);
+	glTexCoord2d(0.0, 1.0); glVertex3d(30, 30, 30);
+	glTexCoord2d(0.0, 0.0); glVertex3d(30, 30, -30);
+	glTexCoord2d(1.0, 0.0); glVertex3d(30, -30, -30);
 	glEnd();
 
 	glBegin(GL_QUADS);
 	glNormal3d(0, 0, -1);
-	glTexCoord2d(1.0, 1.0); glVertex3d(-25, 25, 25);
-	glTexCoord2d(0.0, 1.0); glVertex3d(25, 25, 25);
-	glTexCoord2d(0.0, 0.0); glVertex3d(25, -25, 25);
-	glTexCoord2d(1.0, 0.0); glVertex3d(-25, -25, 25);
+	glTexCoord2d(1.0, 1.0); glVertex3d(-30, 30, 30);
+	glTexCoord2d(0.0, 1.0); glVertex3d(30, 30, 30);
+	glTexCoord2d(0.0, 0.0); glVertex3d(30, -30, 30);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-30, -30, 30);
 	glEnd();
 
-	glDisable(GL_TEXTURE_2D); 
-
-
+	glDisable(GL_TEXTURE_2D);
 }
+
 
 void walec01(void)
 {
@@ -318,16 +311,18 @@ void walec01(void)
 	glPopMatrix();
 }
 
-void kula(void)
+void kula(double kulaX, double kulaY, double kulaZ)
 {
+
+	glTranslated(0+kulaX,18+kulaY,-200+kulaZ);
 	GLUquadricObj*obj;
 	obj = gluNewQuadric();
 	gluQuadricTexture(obj, GL_TRUE);
-	glBindTexture(GL_TEXTURE_2D, texture[0]);
+	glBindTexture(GL_TEXTURE_2D, texture[3]);
 	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	glColor3d(1.0, 0.8, 0.8);
 	glEnable(GL_TEXTURE_2D);
-	gluSphere(obj, 40, 15, 7);
+	gluSphere(obj, 15, 15, 7);
 	glDisable(GL_TEXTURE_2D);
 }
 
@@ -594,7 +589,7 @@ void walec(double r, double h)
 void walec_light(double r, double h)
 {
 	double angle, x, y;
-	glColor3d(0.5, 1, 0);
+	glColor3d(0.7, 0.7, 0.7);
 	glBegin(GL_TRIANGLE_FAN);
 	//Oświetlenie przedniej sciany
 	glNormal3d(0.0, 0.0, -1.0);
@@ -746,6 +741,7 @@ void szescian(void)
 
 void graniastoslup(double a, double b, double h) {
 
+	glColor3d(0.972, 0.96, 0.915);
 	// Dolna podstawa
 	glBegin(GL_QUADS);
 	glNormal3d(0.0, 0, -1);
@@ -841,13 +837,16 @@ void tasma(void) {
 	glTranslated(100, 0, 0);
 	graniastoslup(15, 25, 500);
 
-	// Nakładanie tekstury
-	glEnable(GL_TEXTURE_2D);
-	glBindTexture(GL_TEXTURE_2D, texture[3]); // Ustawienie tekstury
+	
+
 
 	glColor3d(1, 1, 1); // Ustawienie koloru na biały dla poprawnego wyświetlenia tekstury
 	glTranslated(-45, 18, 249);
 
+	glPushMatrix();
+	// Nakładanie tekstury
+	glEnable(GL_TEXTURE_2D);
+	glBindTexture(GL_TEXTURE_2D, texture[3]); // Ustawienie tekstury
 	// Rozrysowanie ścian graniastosłupa z teksturą
 	glBegin(GL_QUADS);
 
@@ -901,13 +900,14 @@ void tasma(void) {
 	glEnd();
 
 	glDisable(GL_TEXTURE_2D); // Wyłączenie tekstur
+	glPopMatrix();
 }
 
 
 void robot_projekt(double d1, double d2, double d3, double d4) {
 	glPushMatrix();
 
-	glTranslated(200, 0, 0);
+	glTranslated(200, 0, -400);
 
 	glRotated(-90, 1, 0, 0);
 	glRotated(d1, 0, 0, 1);  // Używamy rot4 dla odpowiedniej rotacji
@@ -996,8 +996,8 @@ void robot_projekt2(double d1, double d2, double d3, double d4, double d5) {
 	glTranslated(0, 0, 6);          
 	glRotated(180, 0, 1, 0);        
 	glRotated(60, 0, 0, 1);        
-	glRotated(0.25 * d5, 0, 0, 1); 
-	ramie(7, 4, 5, 25); 
+	glRotated(d5, 0, 0, 1); 
+	ramie(7, 4, 5, 20); 
 	glPopMatrix();
 
 	
@@ -1005,22 +1005,22 @@ void robot_projekt2(double d1, double d2, double d3, double d4, double d5) {
 	glTranslated(0, 0, 6);          
 	glRotated(180, 0, 1, 0);        
 	glRotated(-60, 0, 0, 1);        
-	glRotated(-0.25 * d5, 0, 0, 1); 
-	ramie(7, 4, 5, 25);             
+	glRotated(-d5, 0, 0, 1); 
+	ramie(7, 4, 5, 20);             
 	glPopMatrix();
 
 	glPopMatrix();
 }
 
 
-void podstawa() {
+void podloga() {
 
-	
+
 	// Nakładanie tekstury
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D, texture[2]); // Ustawienie tekstury
 
-	glColor3d(1, 1, 1); // Ustawienie koloru na biały dla poprawnego wyświetlenia tekstury
+	
 	glTranslated(-45, 18, 249);
 
 	// Rozrysowanie ścian graniastosłupa z teksturą
@@ -1028,56 +1028,57 @@ void podstawa() {
 
 	// Przednia ściana
 	glNormal3d(0, 0, 1);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-50, -5, 250);
-	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, 250);
-	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, 250);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, 250);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-500, -5, 500);
+	glTexCoord2d(1.0, 1.0); glVertex3d(500, -5, 500);
+	glTexCoord2d(1.0, 0.0); glVertex3d(500, 5, 500);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-500, 5, 500);
 
 	// Tylna ściana
 	glNormal3d(0, 0, -1);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-50, -5, -249);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, -249);
-	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, -249);
-	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, -249);
-
+	glTexCoord2d(0.0, 1.0); glVertex3d(-500, -5, -500);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-500, 5, -500);
+	glTexCoord2d(1.0, 0.0); glVertex3d(500, 5, -500);
+	glTexCoord2d(1.0, 1.0); glVertex3d(500, -5, -500);
 
 
 	// Prawa ściana
 	glNormal3d(1, 0, 0);
-	glTexCoord2d(0.0, 1.0); glVertex3d(50, -5, 250);
-	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, -249);
-	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, -249);
-	glTexCoord2d(0.0, 0.0); glVertex3d(50, 5, 250);
+	glTexCoord2d(0.0, 1.0); glVertex3d(500, -5, 500);
+	glTexCoord2d(1.0, 1.0); glVertex3d(500, -5, -500);
+	glTexCoord2d(1.0, 0.0); glVertex3d(500, 5, -500);
+	glTexCoord2d(0.0, 0.0); glVertex3d(500, 5, 500);
 
 	// Lewa ściana
 	glNormal3d(-1, 0, 0);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-50, -5, 250);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, 250);
-	glTexCoord2d(1.0, 0.0); glVertex3d(-50, 5, -249);
-	glTexCoord2d(1.0, 1.0); glVertex3d(-50, -5, -249);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-500, -5, 500);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-500, 5, 500);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-500, 5, -500);
+	glTexCoord2d(1.0, 1.0); glVertex3d(-500, -5, -500);
 	
 	
 
 	// Dolna ściana
 	glNormal3d(0, -1, 0);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-50, -5, 250);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-50, -5, -249);
-	glTexCoord2d(1.0, 0.0); glVertex3d(50, -5, -249);
-	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, 250);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-500, -5, 500);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-500, -5, -500);
+	glTexCoord2d(1.0, 0.0); glVertex3d(500, -5, -500);
+	glTexCoord2d(1.0, 1.0); glVertex3d(500, -5, 500);
 
 
 
 
 	// Górna ściana
 	glNormal3d(0, 1, 0);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-50, 5, 250);
-	glTexCoord2d(1.0, 1.0); glVertex3d(50, 5, 250);
-	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, -249);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, -249);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-500, 5, 500);
+	glTexCoord2d(1.0, 1.0); glVertex3d(500, 5, 500);
+	glTexCoord2d(1.0, 0.0); glVertex3d(500, 5, -500);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-500, 5, -500);
 
 	glEnd();
 
 	glDisable(GL_TEXTURE_2D); // Wyłączenie tekstur
+
+
 }
 
 	
@@ -1112,7 +1113,6 @@ void RenderScene(void)
 	// KOM LAB4  
 	glPolygonMode(GL_BACK, GL_LINE);
 
-
 	//Uzyskanie siatki:
 	//glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
 
@@ -1128,12 +1128,9 @@ void RenderScene(void)
 
 	//dwa_roboty();
 	//walec01();
-	skrzynka();
 
 	//Wyrysowanie szescianu
 	//szescian();
-
-	
 
 	//Wyrysownaie walca
 	//walec(30, 50);
@@ -1146,20 +1143,37 @@ void RenderScene(void)
 
 	//kula();
 
-	
-
 	//ostroslup(100);
 
 	//WEJSCIOWKA
 	///graniastoslup(10,10,10);
 
 	//stozek(20, 40, 40);
+	
+
+
+	
+
 	glTranslated(0, -50, 0);
-	podstawa();
+	podloga();
 	glTranslated(0, 50, 0);
-	//robot_projekt(rot1, rot2, rot3, rot4);
+
+	robot_projekt(rot1, rot2, rot3, rot4);
+	
+	glTranslated(-210, 0, 0);
+	robot_projekt2(rot1, rot2, rot3, rot4, rot5);
+	glTranslated(210, 0, 0);
+
 	robot_projekt2(rot1, rot2, rot3, rot4,rot5);
 	tasma();
+
+	glTranslated(-210, 17.5, 200);
+	skrzynka();
+	glTranslated(210, -17.5, -200);
+
+	kula(mkulaX, mkulaY, mkulaZ);
+
+	
 	/////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////
@@ -1363,15 +1377,53 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 	case WM_TIMER:
 		if (wParam == 101)
 		{
-			licznik++;
-			if (licznik < 15)
-				rot2 += 0.0;
-			if (licznik > 15 && licznik < 30)
-				rot2 -= 0.0;
-			if (licznik > 30)
-			{
-				licznik = 0;
+			// Akcja 0: Ruch mkulaZ
+			if (licznik == 0) {
+				if (mkulaZ < 400) {
+					mkulaZ += 10.0;
+				}
+
+				// Sprawdzenie zakończenia akcji mkulaZ
+				if (mkulaZ >= 400) {
+					licznik = 1; // Przejdź do następnej akcji (rot2-4)
+				}
 			}
+
+			// Akcja 1: Ruchy rot2, rot3, rot4
+			if (licznik == 1) {
+				BOOL allFinished = TRUE; // Zakładamy, że wszystkie ruchy zakończone
+
+				if (rot2 < 53) {
+					rot2 += 2.0;
+					allFinished = FALSE; // rot2 jeszcze w ruchu
+				}
+				if (rot3 > -29) {
+					rot3 -= 2.0;
+					allFinished = FALSE; // rot3 jeszcze w ruchu
+				}
+				if (rot4 < 22) {
+					rot4 += 2.0;
+					allFinished = FALSE; // rot4 jeszcze w ruchu
+				}
+
+				// Jeśli wszystkie ruchy zakończone, przejdź do następnej akcji
+				if (allFinished == TRUE) {
+					licznik = 2; // Przejdź do rot5
+				}
+			}
+
+			// Akcja 2: Ruch rot5
+			if (licznik == 2) {
+				if (rot5 > -16) {
+					rot5 -= 2.0;
+
+					// Sprawdzenie zakończenia akcji rot5
+					if (rot5 <= -16) {
+						licznik = 3; // Oznacz zakończenie wszystkich akcji
+					}
+				}
+			}
+			
 
 			InvalidateRect(hWnd, NULL, FALSE);
 
@@ -1400,7 +1452,7 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		SetupRC();
 		glGenTextures(2, &texture[0]);                  // tworzy obiekt tekstury			
 
-														// ładuje pierwszy obraz tekstury:
+		// ładuje pierwszy obraz tekstury:
 		bitmapData = LoadBitmapFile("Bitmapy\\checker.bmp", &bitmapInfoHeader);
 
 		glBindTexture(GL_TEXTURE_2D, texture[0]);       // aktywuje obiekt tekstury
@@ -1418,6 +1470,7 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		if (bitmapData)
 			free(bitmapData);
 
+
 		// ładuje drugi obraz tekstury:
 		bitmapData = LoadBitmapFile("Bitmapy\\crate.bmp", &bitmapInfoHeader);
 		glBindTexture(GL_TEXTURE_2D, texture[1]);       // aktywuje obiekt tekstury
@@ -1431,8 +1484,10 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, bitmapInfoHeader.biWidth,
 			bitmapInfoHeader.biHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, bitmapData);
 
+		
 
-		// ładuje trzeci obraz tekstury:
+
+		// ładuje drugi obraz tekstury:
 		bitmapData = LoadBitmapFile("Bitmapy\\ROCK.bmp", &bitmapInfoHeader);
 		glBindTexture(GL_TEXTURE_2D, texture[2]);       // aktywuje obiekt tekstury
 
@@ -1441,15 +1496,11 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
-
 		// tworzy obraz tekstury
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, bitmapInfoHeader.biWidth,
 			bitmapInfoHeader.biHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, bitmapData);
 
-
-
-
-
+		
 
 		// ładuje czwarty obraz tekstury:
 		bitmapData = LoadBitmapFile("Bitmapy\\WATER.bmp", &bitmapInfoHeader);
@@ -1466,11 +1517,7 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 			bitmapInfoHeader.biHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, bitmapData);
 
 
-
-
-
-		if (bitmapData)
-			free(bitmapData);
+	
 
 		// ustalenie sposobu mieszania tekstury z tłem
 		glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
