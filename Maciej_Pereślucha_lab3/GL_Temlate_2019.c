@@ -50,9 +50,11 @@ static GLsizei lastWidth;
 // Opis tekstury
 BITMAPINFOHEADER	bitmapInfoHeader;	// nagłówek obrazu
 unsigned char*		bitmapData;			// dane tekstury
-unsigned int		texture[4];			// obiekt tekstury
+unsigned int		texture[5];			// obiekt tekstury
 
-double rot1, rot2, rot3, rot4, rot5, rot6, rot7, rot8, rot9, rot10, rot11, rot12, rot13, rot14, mkulaX ,mkulaY, mkulaZ;
+
+
+double rot1, rot2, rot3, rot4, rot5, rot6, rot7, rot8, rot9, rot10, rot11, rot12, rot13, rot14, mkulaX ,mkulaY, mkulaZ, anglekula=0.0f;
 int licznik = 0;
 
 
@@ -318,7 +320,7 @@ void kula(double kulaX, double kulaY, double kulaZ)
 	GLUquadricObj*obj;
 	obj = gluNewQuadric();
 	gluQuadricTexture(obj, GL_TRUE);
-	glBindTexture(GL_TEXTURE_2D, texture[3]);
+	glBindTexture(GL_TEXTURE_2D, texture[2]);
 	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	glColor3d(1.0, 0.8, 0.8);
 	glEnable(GL_TEXTURE_2D);
@@ -830,6 +832,8 @@ void robot(double d1, double d2, double d3, double d4) {
 }
 
 void tasma(void) {
+
+
 	glColor3d(1, 0, 1);
 	glTranslated(50, -50, -450);
 	graniastoslup(15, 25, 500);
@@ -837,13 +841,12 @@ void tasma(void) {
 	glTranslated(100, 0, 0);
 	graniastoslup(15, 25, 500);
 
-	
-
 
 	glColor3d(1, 1, 1); // Ustawienie koloru na biały dla poprawnego wyświetlenia tekstury
 	glTranslated(-45, 18, 249);
 
 	glPushMatrix();
+
 	// Nakładanie tekstury
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D, texture[3]); // Ustawienie tekstury
@@ -863,8 +866,6 @@ void tasma(void) {
 	glTexCoord2d(0.0, 0.0); glVertex3d(-50, 5, -249);
 	glTexCoord2d(1.0, 0.0); glVertex3d(50, 5, -249);
 	glTexCoord2d(1.0, 1.0); glVertex3d(50, -5, -249);
-	
-	
 
 	// Prawa ściana
 	glNormal3d(1, 0, 0);
@@ -1373,14 +1374,13 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 
 	switch (message)
 	{
-		// Window creation, setup for OpenGL
 	case WM_TIMER:
 		if (wParam == 101)
 		{
 			// Akcja 0: Ruch mkulaZ
 			if (licznik == 0) {
 				if (mkulaZ < 400) {
-					mkulaZ += 10.0;
+					mkulaZ += 40.0;
 				}
 
 				// Sprawdzenie zakończenia akcji mkulaZ
@@ -1393,7 +1393,7 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 			if (licznik == 1) {
 				BOOL allFinished = TRUE; // Zakładamy, że wszystkie ruchy zakończone
 
-				if (rot2 < 53) {
+				if (rot2 < 52) {
 					rot2 += 2.0;
 					allFinished = FALSE; // rot2 jeszcze w ruchu
 				}
@@ -1416,19 +1416,73 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 			if (licznik == 2) {
 				if (rot5 > -16) {
 					rot5 -= 2.0;
+				}
 
-					// Sprawdzenie zakończenia akcji rot5
-					if (rot5 <= -16) {
-						licznik = 3; // Oznacz zakończenie wszystkich akcji
-					}
+				// Sprawdzenie zakończenia akcji rot5
+				if (rot5 <= -16) {
+					licznik = 3; // Oznacz zakończenie wszystkich akcji
 				}
 			}
+
+			// Akcja 3: Ruchy rot2, rot3, rot4
+			if (licznik == 3) {
+				BOOL allFinished1 = TRUE; // Zakładamy, że wszystkie ruchy zakończone
+
+				if (rot2 >= 40) {
+					rot2 -= 2.0;
+					mkulaX -= 0.4;
+					mkulaY += 5.9;
+					allFinished1 = FALSE; // rot2 jeszcze w ruchu
+				}
+				if (rot3 >= -40) {
+					rot3 -= 2.0;
+					mkulaY += 1.7;
+					allFinished1 = FALSE; // rot3 jeszcze w ruchu
+				}
+				
+
+				// Jeśli wszystkie ruchy zakończone, przejdź do następnej akcji
+				if (allFinished1 == TRUE) {
+					licznik = 4; // Przejdź do rot5
+				}
+			}
+
+			//Obrót w strone skrzynki
+			if (licznik == 4) {
+				if (rot1 > -180){
+					
+					mkulaX -=  8.95 * sin(anglekula);
+					mkulaZ += 8.95 * cos(anglekula);
+					anglekula += (GL_PI /35);
+					rot1 -= 5.0;
+				}
+
+				if (anglekula >= GL_PI) {
+					licznik = 5; // Przejdź do następnej akcji
+				}
+			}
+
+			//Otworzenie szczypiec
+			if (licznik == 5) {
+				if (rot5 < 0) {
+					rot5 += 2.0;
+				}
+
+				// Sprawdzenie zakończenia akcji rot5
+				if (rot5 >= 0) {
+					licznik = 6; // Oznacz zakończenie wszystkich akcji
+				}
+			}
+			
+
+
+		}
 			
 
 			InvalidateRect(hWnd, NULL, FALSE);
 
 
-		}
+	
 		break;
 
 	case WM_CREATE:
@@ -1450,7 +1504,7 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		hRC = wglCreateContext(hDC);
 		wglMakeCurrent(hDC, hRC);
 		SetupRC();
-		glGenTextures(2, &texture[0]);                  // tworzy obiekt tekstury			
+		glGenTextures(4, &texture[0]);                  // tworzy obiekt tekstury			
 
 		// ładuje pierwszy obraz tekstury:
 		bitmapData = LoadBitmapFile("Bitmapy\\checker.bmp", &bitmapInfoHeader);
@@ -1470,7 +1524,6 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		if (bitmapData)
 			free(bitmapData);
 
-
 		// ładuje drugi obraz tekstury:
 		bitmapData = LoadBitmapFile("Bitmapy\\crate.bmp", &bitmapInfoHeader);
 		glBindTexture(GL_TEXTURE_2D, texture[1]);       // aktywuje obiekt tekstury
@@ -1484,7 +1537,8 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, bitmapInfoHeader.biWidth,
 			bitmapInfoHeader.biHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, bitmapData);
 
-		
+		if (bitmapData)
+			free(bitmapData);
 
 
 		// ładuje drugi obraz tekstury:
@@ -1500,6 +1554,8 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, bitmapInfoHeader.biWidth,
 			bitmapInfoHeader.biHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, bitmapData);
 
+		if (bitmapData)
+			free(bitmapData);
 		
 
 		// ładuje czwarty obraz tekstury:
@@ -1516,6 +1572,9 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, bitmapInfoHeader.biWidth,
 			bitmapInfoHeader.biHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, bitmapData);
 
+
+		if (bitmapData)
+			free(bitmapData);
 
 	
 
@@ -1611,9 +1670,6 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		// Key press, check for arrow keys to do cube rotation.
 	case WM_KEYDOWN:
 	{
-
-
-
 		if (wParam == VK_DOWN)
 			xRot -= 5.0f;
 

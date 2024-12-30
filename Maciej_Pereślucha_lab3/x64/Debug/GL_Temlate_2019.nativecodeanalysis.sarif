@@ -1,0 +1,1403 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6385",
+          "message": {
+            "text": "Odczytywanie nieprawidłowych danych z elementu „bitmapImage”."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                },
+                "region": {
+                  "startLine": 393,
+                  "startColumn": 3,
+                  "endLine": 393,
+                  "endColumn": 50
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "LoadBitmapFile",
+                  "decoratedName": "LoadBitmapFile",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 341,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 342,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 343,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 344,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 345,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 348,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 349,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 353,
+                            "startColumn": 2
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 356,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 363,
+                            "startColumn": 2
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 366,
+                            "startColumn": 2
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 369,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "Element „bitmapImage” jest tablicą"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 372,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Pomiń to rozgałęzienie (przyjmowane jest, że element „!bitmapImage” ma wartość false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 380,
+                            "startColumn": 2
+                          }
+                        },
+                        "message": {
+                          "text": "Element „bitmapImage” jest argumentem We/Wy dla elementu „fread” (deklaracja pod adresem c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\ucrt\\stdio.h:239)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 383,
+                            "startColumn": 18
+                          }
+                        },
+                        "message": {
+                          "text": "Pomiń to rozgałęzienie (przyjmowane jest, że element „bitmapImage==(((void *)0))” ma wartość false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 390,
+                            "startColumn": 16
+                          }
+                        },
+                        "message": {
+                          "text": "Element „imageIdx” ma wartość NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 390,
+                            "startColumn": 30
+                          }
+                        },
+                        "message": {
+                          "text": "Wejdź do tej pętli (przyjmowane jest: „<warunek rozgałęzienia>”)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 392,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 393,
+                            "startColumn": 25
+                          }
+                        },
+                        "message": {
+                          "text": "Nieprawidłowy odczyt z elementu „bitmapImage” (poza czytelnym zakresem)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6386",
+          "message": {
+            "text": "Przepełnienie buforu podczas zapisywania do elementu „bitmapImage”."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                },
+                "region": {
+                  "startLine": 394,
+                  "startColumn": 3,
+                  "endLine": 394,
+                  "endColumn": 31
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "LoadBitmapFile",
+                  "decoratedName": "LoadBitmapFile",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 341,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 342,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 343,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 344,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 345,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 348,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 349,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 353,
+                            "startColumn": 2
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 356,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 363,
+                            "startColumn": 2
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 366,
+                            "startColumn": 2
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 369,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "Element „bitmapImage” jest tablicą"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 372,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Pomiń to rozgałęzienie (przyjmowane jest, że element „!bitmapImage” ma wartość false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 380,
+                            "startColumn": 2
+                          }
+                        },
+                        "message": {
+                          "text": "Element „bitmapImage” jest argumentem We/Wy dla elementu „fread” (deklaracja pod adresem c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\ucrt\\stdio.h:239)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 383,
+                            "startColumn": 18
+                          }
+                        },
+                        "message": {
+                          "text": "Pomiń to rozgałęzienie (przyjmowane jest, że element „bitmapImage==(((void *)0))” ma wartość false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 390,
+                            "startColumn": 16
+                          }
+                        },
+                        "message": {
+                          "text": "Element „imageIdx” ma wartość NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 390,
+                            "startColumn": 30
+                          }
+                        },
+                        "message": {
+                          "text": "Wejdź do tej pętli (przyjmowane jest: „<warunek rozgałęzienia>”)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 392,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 393,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 394,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "Nieprawidłowy zapis w elemencie „bitmapImage” (poza zapisywalnym zakresem)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Wyłuskanie wskaźnika NULL „pPal”. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                },
+                "region": {
+                  "startLine": 1251,
+                  "startColumn": 2,
+                  "endLine": 1251,
+                  "endColumn": 21
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "GetOpenGLPalette",
+                  "decoratedName": "GetOpenGLPalette",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1225,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1226,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1227,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1228,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1229,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1230,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1231,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1231,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1231,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1236,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1237,
+                            "startColumn": 2
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1241,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1245,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1248,
+                            "startColumn": 7
+                          }
+                        },
+                        "message": {
+                          "text": "Element „pPal” może mieć wartość NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1251,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Element „pPal” jest wyłuskiwany, ale nadal może mieć wartość NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6387",
+          "message": {
+            "text": "Element „pPal” może być elementem „0”: jest to niespójne ze specyfikacją funkcji „CreatePalette”. W wierszu 1251 znajduje się wcześniejsza lokalizacja, w której może to wystąpić"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                },
+                "region": {
+                  "startLine": 1282,
+                  "startColumn": 2,
+                  "endLine": 1282,
+                  "endColumn": 26
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "GetOpenGLPalette",
+                  "decoratedName": "GetOpenGLPalette",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1225,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1226,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1227,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1228,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1229,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1230,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1231,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1231,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1231,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1236,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1237,
+                            "startColumn": 2
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1241,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1245,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1248,
+                            "startColumn": 7
+                          }
+                        },
+                        "message": {
+                          "text": "Element „pPal” może mieć wartość NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1251,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1252,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1257,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1258,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1259,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1262,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1262,
+                            "startColumn": 16
+                          }
+                        },
+                        "message": {
+                          "text": "Pomiń tę pętlę (przyjmowane jest, że element „i<nColors” ma wartość false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1282,
+                            "startColumn": 10
+                          }
+                        },
+                        "message": {
+                          "text": "Element „pPal” jest wejściem dla elementu „CreatePalette” (deklaracja pod adresem c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\wingdi.h:3851)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                          },
+                          "region": {
+                            "startLine": 1282,
+                            "startColumn": 10
+                          }
+                        },
+                        "message": {
+                          "text": "Element „pPal” nie może być elementem NULL, ponieważ jest to niespójne z adnotacją SAL dotyczącą elementu „CreatePalette”"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C28251",
+          "message": {
+            "text": "Niespójna adnotacja dla „WinMain”: w tym wystąpieniu jest brak adnotacji. Patrz c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\winbase.h(1037). "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+                },
+                "region": {
+                  "startLine": 1297,
+                  "startColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WinMain",
+                  "decoratedName": "WinMain",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.41.34123.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/Studia/Grafika Komputerowa/GK - Maciej_Pereślucha_Projekt/Maciej_Pereślucha_lab3/GL_Temlate_2019.c"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "bc05b4312f249618216572df1c9b36e03d1057a292618c207b7274e00826d1e5"
+          }
+        }
+      ]
+    }
+  ]
+}

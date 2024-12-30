@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+      <FILENAME>GL_Temlate_2019.c</FILENAME>
+      <LINE>393</LINE>
+      <COLUMN>24</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Odczytywanie nieprawidłowych danych z elementu „bitmapImage”.</DESCRIPTION>
+    <FUNCTION>LoadBitmapFile</FUNCTION>
+    <DECORATED>LoadBitmapFile</DECORATED>
+    <FUNCLINE>339</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>341</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>342</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>343</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>344</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>345</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>348</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>349</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>353</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>356</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>363</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>366</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>369</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Element „bitmapImage” jest tablicą</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>372</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Pomiń to rozgałęzienie (przyjmowane jest, że element „!bitmapImage” ma wartość false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>380</LINE>
+        <COLUMN>1</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Element „bitmapImage” jest argumentem We/Wy dla elementu „fread” (deklaracja pod adresem c:\program files (x86)\windows kits\10\include\10.0.22621.0\ucrt\stdio.h:239)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>383</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Pomiń to rozgałęzienie (przyjmowane jest, że element „bitmapImage==(((void *)0))” ma wartość false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>390</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Element „imageIdx” ma wartość NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>390</LINE>
+        <COLUMN>29</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Wejdź do tej pętli (przyjmowane jest: „&lt;warunek rozgałęzienia&gt;”)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>392</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>393</LINE>
+        <COLUMN>24</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Nieprawidłowy odczyt z elementu „bitmapImage” (poza czytelnym zakresem)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+      <FILENAME>GL_Temlate_2019.c</FILENAME>
+      <LINE>394</LINE>
+      <COLUMN>28</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Przepełnienie buforu podczas zapisywania do elementu „bitmapImage”.</DESCRIPTION>
+    <FUNCTION>LoadBitmapFile</FUNCTION>
+    <DECORATED>LoadBitmapFile</DECORATED>
+    <FUNCLINE>339</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>341</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>342</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>343</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>344</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>345</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>348</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>349</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>353</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>356</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>363</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>366</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>369</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Element „bitmapImage” jest tablicą</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>372</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Pomiń to rozgałęzienie (przyjmowane jest, że element „!bitmapImage” ma wartość false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>380</LINE>
+        <COLUMN>1</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Element „bitmapImage” jest argumentem We/Wy dla elementu „fread” (deklaracja pod adresem c:\program files (x86)\windows kits\10\include\10.0.22621.0\ucrt\stdio.h:239)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>383</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Pomiń to rozgałęzienie (przyjmowane jest, że element „bitmapImage==(((void *)0))” ma wartość false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>390</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Element „imageIdx” ma wartość NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>390</LINE>
+        <COLUMN>29</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Wejdź do tej pętli (przyjmowane jest: „&lt;warunek rozgałęzienia&gt;”)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>392</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>393</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>394</LINE>
+        <COLUMN>28</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Nieprawidłowy zapis w elemencie „bitmapImage” (poza zapisywalnym zakresem)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+      <FILENAME>GL_Temlate_2019.c</FILENAME>
+      <LINE>1251</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Wyłuskanie wskaźnika NULL „pPal”. </DESCRIPTION>
+    <FUNCTION>GetOpenGLPalette</FUNCTION>
+    <DECORATED>GetOpenGLPalette</DECORATED>
+    <FUNCLINE>1223</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1225</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1226</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1227</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1228</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1229</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1230</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1231</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1231</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1231</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1236</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1237</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1241</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1245</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1248</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Element „pPal” może mieć wartość NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1251</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Element „pPal” jest wyłuskiwany, ale nadal może mieć wartość NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+      <FILENAME>GL_Temlate_2019.c</FILENAME>
+      <LINE>1282</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>Element „pPal” może być elementem „0”: jest to niespójne ze specyfikacją funkcji „CreatePalette”. W wierszu 1251 znajduje się wcześniejsza lokalizacja, w której może to wystąpić</DESCRIPTION>
+    <FUNCTION>GetOpenGLPalette</FUNCTION>
+    <DECORATED>GetOpenGLPalette</DECORATED>
+    <FUNCLINE>1223</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1225</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1226</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1227</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1228</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1229</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1230</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1231</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1231</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1231</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1236</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1237</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1241</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1245</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1248</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Element „pPal” może mieć wartość NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1251</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1252</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1257</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1258</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1259</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1262</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1262</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Pomiń tę pętlę (przyjmowane jest, że element „i&lt;nColors” ma wartość false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1282</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Element „pPal” jest wejściem dla elementu „CreatePalette” (deklaracja pod adresem c:\program files (x86)\windows kits\10\include\10.0.22621.0\um\wingdi.h:3851)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+        <FILENAME>GL_Temlate_2019.c</FILENAME>
+        <LINE>1282</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Element „pPal” nie może być elementem NULL, ponieważ jest to niespójne z adnotacją SAL dotyczącą elementu „CreatePalette”</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Studia\Grafika Komputerowa\GK - Maciej_Pereślucha_Projekt\Maciej_Pereślucha_lab3\</FILEPATH>
+      <FILENAME>GL_Temlate_2019.c</FILENAME>
+      <LINE>1297</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>28251</DEFECTCODE>
+    <DESCRIPTION>Niespójna adnotacja dla „WinMain”: w tym wystąpieniu jest brak adnotacji. Patrz c:\program files (x86)\windows kits\10\include\10.0.22621.0\um\winbase.h(1037). </DESCRIPTION>
+    <FUNCTION>WinMain</FUNCTION>
+    <DECORATED>WinMain</DECORATED>
+    <FUNCLINE>1297</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>
