@@ -54,7 +54,7 @@ unsigned int		texture[5];			// obiekt tekstury
 
 
 
-double rot1, rot2, rot3, rot4, rot5, rot6, rot7, rot8, rot9, rot10, rot11, rot12, rot13, rot14, mkulaX ,mkulaY, mkulaZ, anglekula=0.0f;
+double rot1, rot2, rot3, rot4, rot5, rot6, rot7, rot8, rot9, rot10, rot11, rot12, rot13, rot14, mkulaX ,mkulaY, mkulaZ, anglekula=0.0f, moveX, moveZ;
 int licznik = 0;
 
 
@@ -320,7 +320,7 @@ void kula(double kulaX, double kulaY, double kulaZ)
 	GLUquadricObj*obj;
 	obj = gluNewQuadric();
 	gluQuadricTexture(obj, GL_TRUE);
-	glBindTexture(GL_TEXTURE_2D, texture[2]);
+	glBindTexture(GL_TEXTURE_2D, texture[0]);
 	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	glColor3d(1.0, 0.8, 0.8);
 	glEnable(GL_TEXTURE_2D);
@@ -953,12 +953,12 @@ void robot_projekt(double d1, double d2, double d3, double d4) {
 	glPopMatrix();
 }
 
-void robot_projekt2(double d1, double d2, double d3, double d4, double d5) {
+void robot_projekt2(double d1, double d2, double d3, double d4, double d5, double moveX, double moveZ) {
 	glPushMatrix();
 
 	glRotated(-90, 1, 0, 0);
 	glRotated(d1, 0, 0, 1); 
-	glTranslated(0, 0, -50);
+	glTranslated(moveX, moveZ, -50);
 	walec_light(25, 20); // podstawa
 
 	glTranslated(0, 0, 20);
@@ -1009,6 +1009,9 @@ void robot_projekt2(double d1, double d2, double d3, double d4, double d5) {
 	glRotated(-d5, 0, 0, 1); 
 	ramie(7, 4, 5, 20);             
 	glPopMatrix();
+
+	moveX = 0;
+	moveZ = 0;
 
 	glPopMatrix();
 }
@@ -1159,18 +1162,20 @@ void RenderScene(void)
 	podloga();
 	glTranslated(0, 50, 0);
 
+	
 	robot_projekt(rot1, rot2, rot3, rot4);
 	
-	glTranslated(-210, 0, 0);
-	robot_projekt2(rot1, rot2, rot3, rot4, rot5);
-	glTranslated(210, 0, 0);
+	glTranslated(-190, 0, 0);
+	robot_projekt2(rot6, rot7, rot8, rot9, rot10, moveX, moveZ);
+	glTranslated(190, 0, 0);
 
-	robot_projekt2(rot1, rot2, rot3, rot4,rot5);
+	
+	robot_projekt2(rot1, rot2, rot3, rot4, rot5,0,0);
 	tasma();
 
-	glTranslated(-210, 17.5, 200);
+	glTranslated(-200, 17.5, 200);
 	skrzynka();
-	glTranslated(210, -17.5, -200);
+	glTranslated(200, -17.5, -200);
 
 	kula(mkulaX, mkulaY, mkulaZ);
 
@@ -1424,7 +1429,7 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 				}
 			}
 
-			// Akcja 3: Ruchy rot2, rot3, rot4
+			// Podnoszenie pilki 1
 			if (licznik == 3) {
 				BOOL allFinished1 = TRUE; // Zakładamy, że wszystkie ruchy zakończone
 
@@ -1451,8 +1456,8 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 			if (licznik == 4) {
 				if (rot1 > -180){
 					
-					mkulaX -=  8.95 * sin(anglekula);
-					mkulaZ += 8.95 * cos(anglekula);
+					mkulaX -=  8.98 * sin(anglekula);
+					mkulaZ += 8.98 * cos(anglekula);
 					anglekula += (GL_PI /35);
 					rot1 -= 5.0;
 				}
@@ -1467,13 +1472,126 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 				if (rot5 < 0) {
 					rot5 += 2.0;
 				}
-
 				// Sprawdzenie zakończenia akcji rot5
 				if (rot5 >= 0) {
 					licznik = 6; // Oznacz zakończenie wszystkich akcji
 				}
 			}
-			
+
+			if (licznik == 6) {
+				if (mkulaY > 0) {
+					mkulaY -= 5.0;
+				}
+				// Sprawdzenie czy kula spadla
+				if (mkulaY <= 0) {
+					licznik = 7;
+				}
+			}
+
+			if (licznik == 7) {
+				if (mkulaX < -192) {
+					mkulaX += 2.0;
+					mkulaZ -= 0.5;
+				}
+				// Korekta kuli w skrzynce
+				if (mkulaX >= -192) {
+					licznik = 8;
+				}
+			}
+
+			//Obrot do bazowej pozycji
+			if (licznik == 8) {
+				if (rot1 < 0) {
+					rot1 += 5.0;
+				}
+
+				if (rot1 >= 0) {
+					licznik = 9; // Przejdź do następnej akcji
+				}
+			}
+
+			//Powrot do bazowej pozycji
+			if (licznik == 9) {
+				BOOL allFinished3 = TRUE; // Zakładamy, że wszystkie ruchy zakończone
+
+				if (rot2 > 0) {
+					rot2 -= 2.0;
+					allFinished3 = FALSE; // rot2 jeszcze w ruchu
+				}
+				if (rot3 < 0) {
+					rot3 += 2.0;
+					allFinished3 = FALSE; // rot3 jeszcze w ruchu
+				}
+				if (rot4 > 0) {
+					rot4 -= 2.0;
+					allFinished3 = FALSE; // rot4 jeszcze w ruchu
+				}
+
+				// Jeśli wszystkie ruchy zakończone, przejdź do następnej akcji
+				if (allFinished3 == TRUE) {
+					licznik = 10; // Przejdź do rot5
+				}
+			}
+
+
+			////////////////////////////////////////////////////////////////////////
+			////////////////////////////////////////////////////////////////////////
+			// Schylanie sie
+			if (licznik == 10) {
+				BOOL allFinished4 = TRUE; // Zakładamy, że wszystkie ruchy zakończone
+
+				if (rot7 < 52) {
+					rot7 += 2.0;
+					allFinished4 = FALSE; // rot2 jeszcze w ruchu
+				}
+				if (rot8 > -29) {
+					rot8 -= 2.0;
+					allFinished4 = FALSE; // rot3 jeszcze w ruchu
+				}
+				if (rot9 < 22) {
+					rot9 += 2.0;
+					allFinished4 = FALSE; // rot4 jeszcze w ruchu
+				}
+
+				// Jeśli wszystkie ruchy zakończone, przejdź do następnej akcji
+				if (allFinished4 == TRUE) {
+					licznik = 11; // Przejdź do rot5
+				}
+			}
+
+			// Zacisniecie szczypiec
+			if (licznik == 11) {
+				if (rot10 > -16) {
+					rot10 -= 2.0;
+				}
+
+				// Sprawdzenie zakończenia akcji rot5
+				if (rot10 <= -16) {
+					licznik = 12; // Oznacz zakończenie wszystkich akcji
+				}
+			}
+
+			// Podnoszenie pilki 2
+			if (licznik == 12) {
+				BOOL allFinished5 = TRUE; // Zakładamy, że wszystkie ruchy zakończone
+
+				if (rot7 >= 40) {
+					rot7 -= 2.0;
+					mkulaX -= 0.4;
+					mkulaY += 5.9;
+					allFinished5 = FALSE; // rot2 jeszcze w ruchu
+				}
+				if (rot8 >= -40) {
+					rot8 -= 2.0;
+					mkulaY += 1.7;
+					allFinished5 = FALSE; // rot3 jeszcze w ruchu
+				}
+
+				// Jeśli wszystkie ruchy zakończone, przejdź do następnej akcji
+				if (allFinished5 == TRUE) {
+					licznik = 13; // Przejdź do rot5
+				}
+			}
 
 
 		}
@@ -1685,26 +1803,27 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		xRot = (const int)xRot % 360;
 		yRot = (const int)yRot % 360;
 
-		if (wParam == '1')
-			rot1 -= 5.0f;
-		if (wParam == '2')
-			rot1 += 5.0f;
-		if (wParam == '3')
-			rot2 -= 5.0f;
-		if (wParam == '4')
-			rot2 += 5.0f;
-		if (wParam == '5')
-			rot3 -= 5.0f;
-		if (wParam == '6')
-			rot3 += 5.0f;
-		if (wParam == '7')
-			rot4 -= 5.0f;
-		if (wParam == '8')
-			rot4 += 5.0f;
-		if (wParam == '9')
-			rot5 -= 5.0f;
-		if (wParam == '0')
-			rot5 += 5.0f;
+		if (wParam == '1') {
+			moveX += 5.0f;
+			mkulaX += 5.0f;
+		}
+			
+		if (wParam == '2') {
+			moveX -= 5.0f;
+			mkulaX -= 5.0f;
+		}
+			
+		if (wParam == '3') {
+			moveZ += 5.0f;
+			mkulaZ -= 5.0f;
+		}
+			
+		if (wParam == '4') {
+			moveZ -= 5.0f;
+			mkulaZ += 5.0f;
+		}
+			
+
 
 		InvalidateRect(hWnd, NULL, FALSE);
 	}
