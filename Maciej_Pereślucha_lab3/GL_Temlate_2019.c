@@ -54,7 +54,7 @@ unsigned int		texture[5];			// obiekt tekstury
 
 
 
-double rot1, rot2, rot3, rot4, rot5, rot6, rot7, rot8, rot9, rot10, rot11, rot12, rot13, rot14, mkulaX ,mkulaY, mkulaZ, anglekula=0.0f, moveX, moveZ;
+double rot1, rot2, rot3, rot4, rot5, rot6, rot7, rot8, rot9, rot10, rot11, rot12, rot13, rot14, mkulaX ,mkulaY, mkulaZ, anglekula=0.0f, moveX=0, moveZ=0;
 int licznik = 0;
 
 
@@ -956,9 +956,9 @@ void robot_projekt(double d1, double d2, double d3, double d4) {
 void robot_projekt2(double d1, double d2, double d3, double d4, double d5, double moveX, double moveZ) {
 	glPushMatrix();
 
+	glTranslated(moveX, -50 , moveZ);
 	glRotated(-90, 1, 0, 0);
 	glRotated(d1, 0, 0, 1); 
-	glTranslated(moveX, moveZ, -50);
 	walec_light(25, 20); // podstawa
 
 	glTranslated(0, 0, 20);
@@ -1010,8 +1010,7 @@ void robot_projekt2(double d1, double d2, double d3, double d4, double d5, doubl
 	ramie(7, 4, 5, 20);             
 	glPopMatrix();
 
-	moveX = 0;
-	moveZ = 0;
+
 
 	glPopMatrix();
 }
@@ -1093,6 +1092,22 @@ void dwa_roboty() {
 	robot(rot1, rot2, rot3,rot4);
 	glTranslated(60, 0, 0);
 	robot(rot1, rot2, rot3, rot4);
+}
+
+void trail() {
+	glPushMatrix();
+	glTranslated(-295, -10, 200);
+	glRotated(90,1,0,0);
+	walec_light(20, 10);
+
+	glRotated(-90,1,0,0);
+	glTranslated(0, -5, -400);
+	walec_light(5, 395);
+
+	glRotated(90, 0, 1, 0);
+	walec_light(5, 200);
+
+	glPopMatrix();
 }
 
 
@@ -1177,9 +1192,11 @@ void RenderScene(void)
 	skrzynka();
 	glTranslated(200, -17.5, -200);
 
+	glPushMatrix();
 	kula(mkulaX, mkulaY, mkulaZ);
+	glPopMatrix();
 
-	
+	trail();
 	/////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////
@@ -1236,7 +1253,7 @@ HPALETTE GetOpenGLPalette(HDC hDC)
 	BYTE RedRange, GreenRange, BlueRange;
 	// Range for each color entry (7,7,and 3)
 
-
+	
 	// Get the pixel format index and retrieve the pixel format description
 	nPixelFormat = GetPixelFormat(hDC);
 	DescribePixelFormat(hDC, nPixelFormat, sizeof(PIXELFORMATDESCRIPTOR), &pfd);
@@ -1491,7 +1508,7 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 			if (licznik == 7) {
 				if (mkulaX < -192) {
 					mkulaX += 2.0;
-					mkulaZ -= 0.5;
+					mkulaZ -= 1.4;
 				}
 				// Korekta kuli w skrzynce
 				if (mkulaX >= -192) {
@@ -1803,26 +1820,44 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		xRot = (const int)xRot % 360;
 		yRot = (const int)yRot % 360;
 
-		if (wParam == '1') {
-			moveX += 5.0f;
-			mkulaX += 5.0f;
-		}
+
+		if (1) {
+
+			if (wParam == '1') {
+				if (moveX < 190 && moveZ == -395) {
+					moveX += 5.0f;
+					mkulaX += 5.0f;
+				}
+			}
+
+			if (wParam == '2') {
+				if (moveX > 0 && moveZ == -395) {
+					moveX -= 5.0f;
+					mkulaX -= 5.0f;
+				}
+			}
 			
-		if (wParam == '2') {
-			moveX -= 5.0f;
-			mkulaX -= 5.0f;
-		}
+
+			if (wParam == '3') {
+				if (moveZ < 0 && moveX == 0) {
+					moveZ += 5.0f;
+					mkulaZ += 5.0f;
+				}
+			}
 			
-		if (wParam == '3') {
-			moveZ += 5.0f;
-			mkulaZ -= 5.0f;
+			if (wParam == '4') {
+				if (-395 < moveZ && moveX == 0){
+					moveZ -= 5.0f;
+					mkulaZ -= 5.0f;
+				}
+			}
+			if (wParam == VK_SPACE) {
+				if (moveZ == -395 && moveX == 190) {
+					licznik = 0;
+					anglekula = 0.0f;
+				}
+			}
 		}
-			
-		if (wParam == '4') {
-			moveZ -= 5.0f;
-			mkulaZ += 5.0f;
-		}
-			
 
 
 		InvalidateRect(hWnd, NULL, FALSE);
