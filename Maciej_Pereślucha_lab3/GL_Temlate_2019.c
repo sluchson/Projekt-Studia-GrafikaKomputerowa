@@ -54,8 +54,9 @@ unsigned int		texture[5];			// obiekt tekstury
 
 
 
-double rot1, rot2, rot3, rot4, rot5, rot6, rot7, rot8, rot9, rot10, rot11, rot12, rot13, rot14, mkulaX ,mkulaY, mkulaZ, anglekula=0.0f, moveX=0, moveZ=0;
-int licznik = 0;
+double rot1, rot2, rot3, rot4, rot5, rot6, rot7, rot8, rot9, rot10, rot11, rot12, rot13, rot14, rot15, mkulaX ,mkulaY, mkulaZ, anglekula=0.0f, moveX=0, moveZ=0;
+int licznik = 0, licznikpom = 0;
+
 
 
 
@@ -905,27 +906,27 @@ void tasma(void) {
 }
 
 
-void robot_projekt(double d1, double d2, double d3, double d4) {
+void robot_projekt(double d1, double d2, double d3, double d4, double d5) {
 	glPushMatrix();
 
 	glTranslated(200, 0, -400);
 
 	glRotated(-90, 1, 0, 0);
-	glRotated(d1, 0, 0, 1);  // Używamy rot4 dla odpowiedniej rotacji
+	glRotated(d1, 0, 0, 1); 
 	glTranslated(0, 0, -50);
 	walec_light(15, 10); // podstawa
 
 	glTranslated(0, 0, 5);
 	walec_light(10, 50); // stojak1
 
-	glRotated(d1, 0, 0, 1);  // Używamy rot1
+	glRotated(d2, 0, 0, 1);  // Używamy rot1
 	glTranslated(0, 0, 50);
 	kula_robot(12); // staw1
 
 	glRotated(90, 0, 1, 0);
 	walec_light(10, 25); // odnoga1
 
-	glRotated(d2, 0, 0, 1);  // Używamy rot2
+	glRotated(d3, 0, 0, 1);  // Używamy rot2
 	glTranslated(0, 0, 25);
 	kula_robot(12); // staw2
 
@@ -933,14 +934,14 @@ void robot_projekt(double d1, double d2, double d3, double d4) {
 	walec_light(10, 50); // stojak2
 
 	glTranslated(0, 0, 50);
-	glRotated(d3, 0, 0, 1);  // Używamy rot3
+	glRotated(d4, 0, 0, 1);  // Używamy rot3
 	kula_robot(12); // staw3
 
 	glRotated(-90, 0, 1, 0);
 	walec_light(10, 25); // odnoga2
 
 	glTranslated(0, 0, 25);
-	glRotated(d4, 0, 0, 1);  // Używamy rot4
+	glRotated(d5, 0, 0, 1);  // Używamy rot4
 	kula_robot(12); // staw4
 
 	glRotated(90, 0, 1, 0);
@@ -1021,7 +1022,7 @@ void podloga() {
 
 	// Nakładanie tekstury
 	glEnable(GL_TEXTURE_2D);
-	glBindTexture(GL_TEXTURE_2D, texture[2]); // Ustawienie tekstury
+	glBindTexture(GL_TEXTURE_2D, texture[4]); // Ustawienie tekstury
 
 	
 	glTranslated(-45, 18, 249);
@@ -1107,6 +1108,11 @@ void trail() {
 	glRotated(90, 0, 1, 0);
 	walec_light(5, 200);
 
+	glTranslated(0, -5, 190);
+	glRotated(-90, 1, 0, 0);
+	walec_light(20, 10);
+
+
 	glPopMatrix();
 }
 
@@ -1178,7 +1184,7 @@ void RenderScene(void)
 	glTranslated(0, 50, 0);
 
 	
-	robot_projekt(rot1, rot2, rot3, rot4);
+	robot_projekt(rot11, rot12, rot13, rot14, rot15);
 	
 	glTranslated(-190, 0, 0);
 	robot_projekt2(rot6, rot7, rot8, rot9, rot10, moveX, moveZ);
@@ -1399,19 +1405,19 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 	case WM_TIMER:
 		if (wParam == 101)
 		{
-			// Akcja 0: Ruch mkulaZ
+			//Ruch kuli na tasmie
 			if (licznik == 0) {
 				if (mkulaZ < 400) {
 					mkulaZ += 40.0;
 				}
 
-				// Sprawdzenie zakończenia akcji mkulaZ
+				// Sprawdzenie zakończenia ruchu kuli
 				if (mkulaZ >= 400) {
-					licznik = 1; // Przejdź do następnej akcji (rot2-4)
+					licznik = 1; // Przejdź do następnej akcji 
 				}
 			}
 
-			// Akcja 1: Ruchy rot2, rot3, rot4
+			// Podniesienie kuli
 			if (licznik == 1) {
 				BOOL allFinished = TRUE; // Zakładamy, że wszystkie ruchy zakończone
 
@@ -1434,13 +1440,13 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 				}
 			}
 
-			// Akcja 2: Ruch rot5
+			// Zacisniecie szczypiec
 			if (licznik == 2) {
 				if (rot5 > -16) {
 					rot5 -= 2.0;
 				}
 
-				// Sprawdzenie zakończenia akcji rot5
+				// Sprawdzenie zakończenia akcji 
 				if (rot5 <= -16) {
 					licznik = 3; // Oznacz zakończenie wszystkich akcji
 				}
@@ -1461,21 +1467,21 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 					mkulaY += 1.7;
 					allFinished1 = FALSE; // rot3 jeszcze w ruchu
 				}
-				
+
 
 				// Jeśli wszystkie ruchy zakończone, przejdź do następnej akcji
 				if (allFinished1 == TRUE) {
-					licznik = 4; // Przejdź do rot5
+					licznik = 4;
 				}
 			}
 
 			//Obrót w strone skrzynki
 			if (licznik == 4) {
-				if (rot1 > -180){
-					
-					mkulaX -=  8.98 * sin(anglekula);
+				if (rot1 > -180) {
+
+					mkulaX -= 8.98 * sin(anglekula);
 					mkulaZ += 8.98 * cos(anglekula);
-					anglekula += (GL_PI /35);
+					anglekula += (GL_PI / 35);
 					rot1 -= 5.0;
 				}
 
@@ -1596,24 +1602,103 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 					rot7 -= 2.0;
 					mkulaX -= 0.4;
 					mkulaY += 5.9;
-					allFinished5 = FALSE; // rot2 jeszcze w ruchu
+					allFinished5 = FALSE; // rot7 jeszcze w ruchu
 				}
 				if (rot8 >= -40) {
 					rot8 -= 2.0;
 					mkulaY += 1.7;
-					allFinished5 = FALSE; // rot3 jeszcze w ruchu
+					allFinished5 = FALSE; // rot8 jeszcze w ruchu
 				}
 
 				// Jeśli wszystkie ruchy zakończone, przejdź do następnej akcji
 				if (allFinished5 == TRUE) {
-					licznik = 13; // Przejdź do rot5
+					licznik = 13; //
+				}
+			}
+
+			//Otworzenie szczypiec
+			if (licznik == 14) {
+				if (rot10 < 0) {
+					rot10 += 2.0;
+				}
+				// Sprawdzenie zakończenia akcji rot10
+				if (rot10 >= 0) {
+					licznik = 15;
+				}
+			}
+
+			if (licznik == 15) {
+				if (mkulaY > 0) {
+					mkulaY -= 5.0;
+				}
+				// Sprawdzenie czy kula spadla
+				if (mkulaY <= 0) {
+					licznik = 16;
+				}
+			}
+
+			if (licznik == 16) {
+				if (mkulaX < 0) {
+					mkulaX += 2.0;
+					mkulaZ -= 2.5;
+				}
+				// Korekta kuli na tasmie
+				if (mkulaX >= 0) {
+					licznik = 17;
+				}
+			}
+
+			//Powrot do bazowej pozycji
+			if (licznik == 18) {
+				BOOL allFinished3 = TRUE; // Zakładamy, że wszystkie ruchy zakończone
+
+				if (rot7 > 0) {
+					rot7 -= 2.0;
+					allFinished3 = FALSE; // rot2 jeszcze w ruchu
+				}
+				if (rot8 < 0) {
+					rot8 += 2.0;
+					allFinished3 = FALSE; // rot3 jeszcze w ruchu
+				}
+				if (rot9 > 0) {
+					rot9 -= 2.0;
+					allFinished3 = FALSE; // rot4 jeszcze w ruchu
+				}
+
+				// Jeśli wszystkie ruchy zakończone, przejdź do następnej akcji
+				if (allFinished3 == TRUE) {
+					licznik = 0; // Przejdź do rot5
 				}
 			}
 
 
-		}
-			
+			///////////////////////////////////////////////////////////////////////////////
+			//Ruch maskotki
+			if (licznikpom == 0) {
+				if (rot11 >= -180) {
+					rot11 -= 20;
+					rot12 += 5;
+					rot13 -= 5;
+					rot14 += 5;
+					rot15 -= 5;
+				}
+				if (rot11 == -180)
+					licznikpom = 1;
+			}
 
+			if (licznikpom == 1) {
+				if (rot11 <= 180) {
+					rot11 += 20;
+					rot12 -= 5;
+					rot13 += 5;
+					rot14 -= 5;
+					rot15 += 5;
+				}
+				if (rot11 == 180)
+					licznikpom = 0;
+			}
+
+		}
 			InvalidateRect(hWnd, NULL, FALSE);
 
 
@@ -1821,7 +1906,7 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		yRot = (const int)yRot % 360;
 
 
-		if (1) {
+		if (licznik == 13) {
 
 			if (wParam == '1') {
 				if (moveX < 190 && moveZ == -395) {
@@ -1853,8 +1938,42 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 			}
 			if (wParam == VK_SPACE) {
 				if (moveZ == -395 && moveX == 190) {
-					licznik = 0;
 					anglekula = 0.0f;
+					licznik = 14;
+				}
+			}
+		}
+
+
+		if (licznik == 17) {
+	
+			if (wParam == '1') {
+				if (moveX < 190 && moveZ == -395) {
+					moveX += 5.0f;
+				}
+			}
+
+			if (wParam == '2') {
+				if (moveX > 0 && moveZ == -395) {
+					moveX -= 5.0f;
+				}
+			}
+
+
+			if (wParam == '3') {
+				if (moveZ < 0 && moveX == 0) {
+					moveZ += 5.0f;
+				}
+			}
+
+			if (wParam == '4') {
+				if (-395 < moveZ && moveX == 0) {
+					moveZ -= 5.0f;
+				}
+			}
+			if (wParam == VK_SPACE) {
+				if (moveZ == 0 && moveX == 0) {
+					licznik = 18;
 				}
 			}
 		}
