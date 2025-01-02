@@ -54,7 +54,7 @@ unsigned int		texture[5];			// obiekt tekstury
 
 
 
-double rot1, rot2, rot3, rot4, rot5, rot6, rot7, rot8, rot9, rot10, rot11, rot12, rot13, rot14, rot15, mkulaX ,mkulaY, mkulaZ, anglekula=0.0f, moveX=0, moveZ=0;
+double rot1, rot2, rot3, rot4, rot5, rot6, rot7, rot8, rot9, rot10, rot11, rot12, rot13, rot14, rot15, mkulaX ,mkulaY, mkulaZ, anglekula=0.0f, moveX=0, moveZ=0, observerX, observerY, observerZ;
 int licznik = 0, licznikpom = 0;
 
 
@@ -128,7 +128,7 @@ void calcNormal(float v[3][3], float out[3])
 // Change viewing volume and viewport.  Called when window is resized
 void ChangeSize(GLsizei w, GLsizei h)
 {
-	GLfloat nRange = 500.0f;
+	GLfloat nRange = 600.0f;
 	GLfloat fAspect;
 	// Prevent a divide by zero
 	if (h == 0)
@@ -909,7 +909,7 @@ void tasma(void) {
 void robot_projekt(double d1, double d2, double d3, double d4, double d5) {
 	glPushMatrix();
 
-	glTranslated(200, 0, -400);
+	glTranslated(-100, 0, -200);
 
 	glRotated(-90, 1, 0, 0);
 	glRotated(d1, 0, 0, 1); 
@@ -1025,58 +1025,52 @@ void podloga() {
 	glBindTexture(GL_TEXTURE_2D, texture[4]); // Ustawienie tekstury
 
 	
-	glTranslated(-45, 18, 249);
+
 
 	// Rozrysowanie ścian graniastosłupa z teksturą
 	glBegin(GL_QUADS);
-
 	// Przednia ściana
 	glNormal3d(0, 0, 1);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-500, -5, 500);
-	glTexCoord2d(1.0, 1.0); glVertex3d(500, -5, 500);
-	glTexCoord2d(1.0, 0.0); glVertex3d(500, 5, 500);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-500, 5, 500);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-400, -5, 400);
+	glTexCoord2d(1.0, 1.0); glVertex3d(400, -5, 400);
+	glTexCoord2d(1.0, 0.0); glVertex3d(400, 5, 400);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-400, 5, 400);
 
 	// Tylna ściana
 	glNormal3d(0, 0, -1);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-500, -5, -500);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-500, 5, -500);
-	glTexCoord2d(1.0, 0.0); glVertex3d(500, 5, -500);
-	glTexCoord2d(1.0, 1.0); glVertex3d(500, -5, -500);
-
+	glTexCoord2d(0.0, 1.0); glVertex3d(-400, -5, -400);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-400, 5, -400);
+	glTexCoord2d(1.0, 0.0); glVertex3d(400, 5, -400);
+	glTexCoord2d(1.0, 1.0); glVertex3d(400, -5, -400);
 
 	// Prawa ściana
 	glNormal3d(1, 0, 0);
-	glTexCoord2d(0.0, 1.0); glVertex3d(500, -5, 500);
-	glTexCoord2d(1.0, 1.0); glVertex3d(500, -5, -500);
-	glTexCoord2d(1.0, 0.0); glVertex3d(500, 5, -500);
-	glTexCoord2d(0.0, 0.0); glVertex3d(500, 5, 500);
+	glTexCoord2d(0.0, 1.0); glVertex3d(400, -5, 400);
+	glTexCoord2d(1.0, 1.0); glVertex3d(400, -5, -400);
+	glTexCoord2d(1.0, 0.0); glVertex3d(400, 5, -400);
+	glTexCoord2d(0.0, 0.0); glVertex3d(400, 5, 400);
 
 	// Lewa ściana
 	glNormal3d(-1, 0, 0);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-500, -5, 500);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-500, 5, 500);
-	glTexCoord2d(1.0, 0.0); glVertex3d(-500, 5, -500);
-	glTexCoord2d(1.0, 1.0); glVertex3d(-500, -5, -500);
-	
-	
+	glTexCoord2d(0.0, 1.0); glVertex3d(-400, -5, 400);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-400, 5, 400);
+	glTexCoord2d(1.0, 0.0); glVertex3d(-400, 5, -400);
+	glTexCoord2d(1.0, 1.0); glVertex3d(-400, -5, -400);
 
 	// Dolna ściana
 	glNormal3d(0, -1, 0);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-500, -5, 500);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-500, -5, -500);
-	glTexCoord2d(1.0, 0.0); glVertex3d(500, -5, -500);
-	glTexCoord2d(1.0, 1.0); glVertex3d(500, -5, 500);
-
-
-
+	glTexCoord2d(0.0, 1.0); glVertex3d(-400, -5, 400);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-400, -5, -400);
+	glTexCoord2d(1.0, 0.0); glVertex3d(400, -5, -400);
+	glTexCoord2d(1.0, 1.0); glVertex3d(400, -5, 400);
 
 	// Górna ściana
 	glNormal3d(0, 1, 0);
-	glTexCoord2d(0.0, 1.0); glVertex3d(-500, 5, 500);
-	glTexCoord2d(1.0, 1.0); glVertex3d(500, 5, 500);
-	glTexCoord2d(1.0, 0.0); glVertex3d(500, 5, -500);
-	glTexCoord2d(0.0, 0.0); glVertex3d(-500, 5, -500);
+	glTexCoord2d(0.0, 1.0); glVertex3d(-400, 5, 400);
+	glTexCoord2d(1.0, 1.0); glVertex3d(400, 5, 400);
+	glTexCoord2d(1.0, 0.0); glVertex3d(400, 5, -400);
+	glTexCoord2d(0.0, 0.0); glVertex3d(-400, 5, -400);
+
 
 	glEnd();
 
@@ -1116,7 +1110,33 @@ void trail() {
 	glPopMatrix();
 }
 
+void all(void) {
 
+	glTranslated(0, -50, 0);
+	podloga();
+	glTranslated(0, 50, 0);
+
+
+	robot_projekt(rot11, rot12, rot13, rot14, rot15);
+
+	glTranslated(-190, 0, 0);
+	robot_projekt2(rot6, rot7, rot8, rot9, rot10, moveX, moveZ);
+	glTranslated(190, 0, 0);
+
+
+	robot_projekt2(rot1, rot2, rot3, rot4, rot5, 0, 0);
+	tasma();
+
+	glTranslated(-200, 17.5, 200);
+	skrzynka();
+	glTranslated(200, -17.5, -200);
+
+	glPushMatrix();
+	kula(mkulaX, mkulaY, mkulaZ);
+	glPopMatrix();
+
+	trail();
+}
 // Called to draw scene
 void RenderScene(void)
 {
@@ -1174,14 +1194,14 @@ void RenderScene(void)
 	///graniastoslup(10,10,10);
 
 	//stozek(20, 40, 40);
-	
+	glTranslatef(observerX, observerY, observerZ);
 
 
 	
 
-	glTranslated(0, -50, 0);
+	glTranslated(0, -50, -200);
 	podloga();
-	glTranslated(0, 50, 0);
+	glTranslated(0, 50, 200);
 
 	
 	robot_projekt(rot11, rot12, rot13, rot14, rot15);
@@ -1207,6 +1227,8 @@ void RenderScene(void)
 	/////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////
 	
+
+
 	glPopMatrix();
 	glMatrixMode(GL_MODELVIEW);
 
@@ -1244,7 +1266,6 @@ void SetDCPixelFormat(HDC hDC)
 	// Set the pixel format for the device context
 	SetPixelFormat(hDC, nPixelFormat, &pfd);
 }
-
 
 
 // If necessary, creates a 3-3-2 palette for the device context listed.
@@ -1408,7 +1429,7 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 			//Ruch kuli na tasmie
 			if (licznik == 0) {
 				if (mkulaZ < 400) {
-					mkulaZ += 40.0;
+					mkulaZ += 10.0;
 				}
 
 				// Sprawdzenie zakończenia ruchu kuli
@@ -1724,7 +1745,9 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		hRC = wglCreateContext(hDC);
 		wglMakeCurrent(hDC, hRC);
 		SetupRC();
-		glGenTextures(4, &texture[0]);                  // tworzy obiekt tekstury			
+		glGenTextures(5, &texture[0]);                  // tworzy obiekt tekstury			
+
+
 
 		// ładuje pierwszy obraz tekstury:
 		bitmapData = LoadBitmapFile("Bitmapy\\checker.bmp", &bitmapInfoHeader);
@@ -1781,6 +1804,24 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 		// ładuje czwarty obraz tekstury:
 		bitmapData = LoadBitmapFile("Bitmapy\\WATER.bmp", &bitmapInfoHeader);
 		glBindTexture(GL_TEXTURE_2D, texture[3]);       // aktywuje obiekt tekstury
+
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+
+		// tworzy obraz tekstury
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, bitmapInfoHeader.biWidth,
+			bitmapInfoHeader.biHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, bitmapData);
+
+
+		if (bitmapData)
+			free(bitmapData);
+
+		// ładuje piaty obraz tekstury:
+		bitmapData = LoadBitmapFile("Bitmapy\\GRASS.bmp", &bitmapInfoHeader);
+		glBindTexture(GL_TEXTURE_2D, texture[4]);       // aktywuje obiekt tekstury
 
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
@@ -1904,6 +1945,33 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 
 		xRot = (const int)xRot % 360;
 		yRot = (const int)yRot % 360;
+
+
+		
+		if (wParam == 'W')
+		{
+			observerZ += 10;	
+		}
+		if (wParam == 'A')
+		{
+			observerX += 10;	
+		}
+		if (wParam == 'D')
+		{
+			observerX -= 10;
+		}
+		if (wParam == 'S')
+		{
+			observerZ -= 10;
+		}
+		if (wParam == 'Q')
+		{
+			observerY += 10;
+		}
+		if (wParam == 'E')
+		{
+			observerY -= 10;
+		}
 
 
 		if (licznik == 13) {
