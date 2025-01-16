@@ -329,7 +329,19 @@ void kula(double kulaX, double kulaY, double kulaZ)
 	glDisable(GL_TEXTURE_2D);
 }
 
+void kula_tex(double a)
+{
 
+	GLUquadricObj* obj;
+	obj = gluNewQuadric();
+	gluQuadricTexture(obj, GL_TRUE);
+	glBindTexture(GL_TEXTURE_2D, texture[2]);
+	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+	glColor3d(1.0, 0.8, 0.8);
+	glEnable(GL_TEXTURE_2D);
+	gluSphere(obj, a, 15, 7);
+	glDisable(GL_TEXTURE_2D);
+}
 
 
 
@@ -921,34 +933,34 @@ void robot_projekt(double d1, double d2, double d3, double d4, double d5) {
 
 	glRotated(d2, 0, 0, 1);  // Używamy rot1
 	glTranslated(0, 0, 50);
-	kula_robot(12); // staw1
+	kula_tex(12); // staw1
 
 	glRotated(90, 0, 1, 0);
 	walec_light(10, 25); // odnoga1
 
 	glRotated(d3, 0, 0, 1);  // Używamy rot2
 	glTranslated(0, 0, 25);
-	kula_robot(12); // staw2
+	kula_tex(12); // staw2
 
 	glRotated(-90, 0, 1, 0);
 	walec_light(10, 50); // stojak2
 
 	glTranslated(0, 0, 50);
 	glRotated(d4, 0, 0, 1);  // Używamy rot3
-	kula_robot(12); // staw3
+	kula_tex(12); // staw3
 
 	glRotated(-90, 0, 1, 0);
 	walec_light(10, 25); // odnoga2
 
 	glTranslated(0, 0, 25);
 	glRotated(d5, 0, 0, 1);  // Używamy rot4
-	kula_robot(12); // staw4
+	kula_tex(12); // staw4
 
 	glRotated(90, 0, 1, 0);
 	walec_light(10, 50); // stojak3
 
 	glTranslated(0, 0, 50);
-	kula_robot(25); //głowa
+	kula_tex(25); //głowa
 
 
 	glPopMatrix();
@@ -1983,7 +1995,7 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 				}
 			}
 
-			if (wParam == '2') {
+			if (wParam == '3') {
 				if (moveX > 0 && moveZ == -395) {
 					moveX -= 5.0f;
 					mkulaX -= 5.0f;
@@ -1991,7 +2003,7 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 			}
 			
 
-			if (wParam == '3') {
+			if (wParam == '2') {
 				if (moveZ < 0 && moveX == 0) {
 					moveZ += 5.0f;
 					mkulaZ += 5.0f;
@@ -2021,14 +2033,14 @@ LRESULT CALLBACK WndProc(HWND    hWnd,
 				}
 			}
 
-			if (wParam == '2') {
+			if (wParam == '3') {
 				if (moveX > 0 && moveZ == -395) {
 					moveX -= 5.0f;
 				}
 			}
 
 
-			if (wParam == '3') {
+			if (wParam == '2') {
 				if (moveZ < 0 && moveX == 0) {
 					moveZ += 5.0f;
 				}
